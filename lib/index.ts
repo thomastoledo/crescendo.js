@@ -46,7 +46,7 @@ class Crescendo {
         this.map = this.buildMap(categories);
 
         Object.entries(registering)
-            .forEach(([cat, registeredIds]) => {
+            .forEach(([cat, registeredIds]: [string, RegisteringItem[]]) => {
                 registeredIds.forEach(({elemId, hideOnInput}: RegisteringItem) => {this.register(cat, {elemId, hideOnInput});})
             });
 
@@ -63,7 +63,7 @@ class Crescendo {
 
     public register(categoryName: string, {elemId, hideOnInput = true}: RegisteringItem) {
 
-        const elem: HTMLElement = document.getElementById(elemId);
+        const elem: HTMLElement | null = document.getElementById(elemId);
         
         if (!elem) {
             console.error(`Element of id ${elemId} was not found`);

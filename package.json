@@ -1,9 +1,11 @@
 {
-  "name": "crescendo",
+  "name": "crescendojs",
   "version": "0.0.1",
-  "description": "CrescendoJS is a small  library you can use to add time-evolving messages to your forms",
-  "main": "app.js",
+  "description": "CrescendoJS is a small library you can use to add multiple error messages to your forms",
+  "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +26,6 @@
   "homepage": "https://github.com/nugetchar/crescendo.js#readme",
   "devDependencies": {
     "typescript": "^3.8.3"
-  }
+  },
+  "dependencies": {}
 }
