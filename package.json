@@ -1,9 +1,9 @@
 {
   "name": "crescendojs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CrescendoJS is a small library you can use to add multiple error messages to your forms",
   "main": "dist/index.js",
-  "types" : "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
