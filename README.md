@@ -68,7 +68,7 @@ document.getElementById('email').addEventListener('blur', (e) => {
     // and if there are any mistake
     crescendo.next('emailFormat', 'email');
 
-    // if everything is fine, you can just add the error
+    // if everything is fine, you can just hide the error
     crescendo.hideError('emailFormat', 'email');
 });
 ```
