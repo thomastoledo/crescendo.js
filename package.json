@@ -1,0 +1,28 @@
+{
+  "name": "crescendo",
+  "version": "0.0.1",
+  "description": "CrescendoJS is a small  library you can use to add time-evolving messages to your forms",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nugetchar/crescendo.js.git"
+  },
+  "keywords": [
+    "crescendo",
+    "javascript",
+    "forms",
+    "messages"
+  ],
+  "author": "Thomas Toledo-Pierre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nugetchar/crescendo.js/issues"
+  },
+  "homepage": "https://github.com/nugetchar/crescendo.js#readme",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
