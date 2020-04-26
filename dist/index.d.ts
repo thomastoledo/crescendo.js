@@ -10,7 +10,7 @@ export interface RegisteringItem {
     elemId: string;
     hideOnInput: boolean;
 }
-interface CrescendoCategories {
+export interface CrescendoCategories {
     [k: string]: string[];
 }
 declare class Crescendo {
