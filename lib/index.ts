@@ -35,7 +35,7 @@ export interface RegisteringItem {
     hideOnInput: boolean;
 }
 
-interface CrescendoCategories {
+export interface CrescendoCategories {
     [k: string]: string[]
 }
 
@@ -47,7 +47,7 @@ class Crescendo {
 
         Object.entries(registering)
             .forEach(([cat, registeredIds]: [string, RegisteringItem[]]) => {
-                registeredIds.forEach(({elemId, hideOnInput}: RegisteringItem) => {this.register(cat, {elemId, hideOnInput});})
+                registeredIds.forEach(({elemId, hideOnInput = true}: RegisteringItem) => {this.register(cat, {elemId, hideOnInput});})
             });
 
     }
