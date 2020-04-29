@@ -42,6 +42,16 @@ export interface CrescendoCategories {
 class Crescendo {
     private map: CrescendoMap;
 
+    private static readonly BUILT_IN_CATEGORIES: CrescendoCategories = {
+        emailFormat: [''],
+        telFormat: [],
+        emptyValue: [],
+    };
+    
+    public static get builtInCategories() {
+        return {...Crescendo.BUILT_IN_CATEGORIES};
+    }
+
     private constructor({categories, registering = {}}: CrescendoInitOpt) {
         this.map = this.buildMap(categories);
 

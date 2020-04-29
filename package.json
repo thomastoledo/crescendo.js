@@ -1,11 +1,12 @@
 {
   "name": "crescendojs",
-  "version": "0.0.2-fix",
+  "version": "0.0.2",
   "description": "CrescendoJS is a small library you can use to add multiple error messages to your forms",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "gulp",
+    "build:examples": "gulp examples",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +26,9 @@
   },
   "homepage": "https://github.com/nugetchar/crescendo.js#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "merge2": "^1.3.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {}
