@@ -1,6 +1,6 @@
 {
   "name": "crescendojs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "CrescendoJS is a small library you can use to add multiple error messages to your forms",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,14 +30,12 @@
   },
   "homepage": "https://github.com/nugetchar/crescendo.js#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
     "gulp-browserify": "^0.5.1",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "merge2": "^1.3.0",
     "rimraf": "^3.0.2",
     "typescript": "^3.8.3"
   },
-  "dependencies": {
-    "grunt": "^1.1.0",
-    "gulp": "^4.0.2",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "merge2": "^1.3.0"
-  }
+  "dependencies": {}
 }
