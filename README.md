@@ -38,7 +38,7 @@ const options = {
     registering: {
         // you specify for which category you want to register the form control
         // you specify the form control id
-        // you specify if you want to error message to be hidden when the user starts typing again (default is true)
+        // you specify if you want the error message to be hidden when the user starts typing again (default is true)
         emailFormat: [{elemId: 'email', hideOnInput: true}],
     }
 }
