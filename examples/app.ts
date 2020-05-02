@@ -30,4 +30,4 @@ email.addEventListener('blur', function() {
         crescendo.next('invalidFormat', this.id);
     }
 
-}); 
+});

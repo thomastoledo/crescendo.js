@@ -1,6 +1,8 @@
 # crescendo.js
+A brand new useless library
 
-A brand new useless framework
+## Realease
+0.0.3
 
 ## What
 Allowing your team to create in a simple way many error messages for your forms.
@@ -73,6 +75,9 @@ document.getElementById('email').addEventListener('blur', (e) => {
 });
 ```
 
-## What's next
+## Examples
+You can find some examples in the "examples" folder. To compile them, clone the project and then launch `npm run build:examples`. You'll then need a server to visualize them, as I used JavaScript modules in it.
 
-Yes.
+## What's next
+- allow users to load JSON files;
+- allow users to erase all errors for an element.
