@@ -1,10 +1,14 @@
-export function init(opt: CrescendoInitOpt) {
-    return Crescendo.of(opt);
+export function init({categories, registering = {}}: CrescendoInitOpt) {
+    return Crescendo.of({categories, registering});
 };
+
+export function builtInCategories(): CrescendoCategories {
+    return Crescendo.builtInCategories;
+}
 
 export interface CrescendoInitOpt {
     categories: CrescendoCategories;
-    registering: Registering;
+    registering?: Registering;
 }
 
 interface CrescendoMap {
@@ -32,7 +36,7 @@ interface Registering {
 
 export interface RegisteringItem {
     elemId: string;
-    hideOnInput: boolean;
+    hideOnInput?: boolean;
 }
 
 export interface CrescendoCategories {
@@ -41,6 +45,44 @@ export interface CrescendoCategories {
 
 class Crescendo {
     private map: CrescendoMap;
+
+    private static readonly BUILT_IN_CATEGORIES: CrescendoCategories = {
+        invalidFormat: [
+            `Invalid format.`,
+            `Invalid format.`,
+            `Invalid format.`,
+            `Invalid format.`,
+            `Invalid format.`,
+            `Are you for real? Invalid format.`,
+            `Invalid format.`,
+            `Invalid format.`,
+            `I've got all my time. Invalid format.`,
+            `In va lid  for mat.`,
+            `Are you drunk? Invalid format.`,
+            `Aw come on! You know it's invalid.`,
+            `Believe in yourself. The format is invalid.`,
+
+        ],
+        emptyValue: [
+            `This field is mandatory`,
+            `This field is mandatory`,
+            `This field is **mandatory**`,
+            `This field is: mandatory`,
+            `This field is: **mandatory**`,
+            `This field is:  m a n d a t o r y`,
+            `This field is:  M A N D A T O R Y`,
+            `ffs do you even read me? This field is MANDATORY`,
+            `Bruh. Mandatory.`,
+            `GODDAMMIT. Mandatory!`,
+            `Just type something in this field. Please.`,
+            `OK you know what? I'm not validating. It's mandatory.`,
+            `Nu-huh. This field is mandatory.`
+        ],
+    };
+    
+    public static get builtInCategories() {
+        return {...Crescendo.BUILT_IN_CATEGORIES};
+    }
 
     private constructor({categories, registering = {}}: CrescendoInitOpt) {
         this.map = this.buildMap(categories);
@@ -111,6 +153,7 @@ class Crescendo {
     private createErrorElement() {
         const errorElem = document.createElement('p');
         errorElem.style.display = 'none';
+        errorElem.classList.add('crescendo__error-msg');
         return errorElem;
     }
 
@@ -124,7 +167,7 @@ class Crescendo {
         return this;
     }
 
-    static of(opt: CrescendoInitOpt): Crescendo {
-        return new Crescendo(opt);
+    static of({categories, registering = {}}: CrescendoInitOpt): Crescendo {
+        return new Crescendo({categories, registering});
     }
 }
